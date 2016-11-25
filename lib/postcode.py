@@ -53,7 +53,7 @@ def parse_uk_postcode(postcode, strict=True, incode_mandatory=True):
     postcode = postcode.replace(' ', '').upper() # Normalize
     
     if len(postcode) > 7:
-        raise ValueError('Postcode too long')
+        raise ValueError('Postcode \'%s\' too long' % postcode)
     
     # Validate postcode
     if strict:
